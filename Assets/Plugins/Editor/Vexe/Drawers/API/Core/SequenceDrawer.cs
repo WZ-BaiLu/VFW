@@ -259,11 +259,11 @@ namespace Vexe.Editor.Drawers
                                 ///Only valid for Classes implementing ICloneable
                                 if (typeof(ICloneable).IsAssignableFrom(_elementType) && elementValue != null)
                                 {
-                                    if (!_options.Readonly && _options.PerItemDuplicate && gui.AddButton("element", MiniButtonStyle.ModRight))
+                                    if (!_options.Readonly && _options.PerItemInsert && gui.AddButton("element", MiniButtonStyle.ModRight))
                                     {
                                         ICloneable _elementToClone = (ICloneable)elementValue;
                                         TElement cloned = (TElement)_elementToClone.Clone();
-                                        AddValue(cloned);
+                                        Insert(i, cloned);
                                     }
                                 }
                             }
@@ -390,7 +390,7 @@ namespace Vexe.Editor.Drawers
             public readonly bool Advanced;
             public readonly bool LineNumbers;
             public readonly bool PerItemRemove;
-            public readonly bool PerItemDuplicate;
+            public readonly bool PerItemInsert;
             public readonly bool GuiBox;
             public readonly bool UniqueItems;
             public readonly bool Filter;
@@ -401,7 +401,7 @@ namespace Vexe.Editor.Drawers
                 Advanced = options.HasFlag(Seq.Advanced);
                 LineNumbers = options.HasFlag(Seq.LineNumbers);
                 PerItemRemove = options.HasFlag(Seq.PerItemRemove);
-                PerItemDuplicate = options.HasFlag(Seq.PerItemDuplicate);
+                PerItemInsert = options.HasFlag(Seq.PerItemInsert);
                 GuiBox = options.HasFlag(Seq.GuiBox);
                 UniqueItems = options.HasFlag(Seq.UniqueItems);
                 Filter = options.HasFlag(Seq.Filter);

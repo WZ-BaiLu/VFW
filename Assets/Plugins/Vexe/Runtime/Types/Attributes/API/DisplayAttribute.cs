@@ -212,6 +212,6 @@ namespace Vexe.Runtime.Types
         /// <summary>
         /// Whether to show a duplicate button that will add clone element at the end of the list.
         /// </summary>
-        PerItemDuplicate = 1 << 8,
+        PerItemInsert = 1 << 8,
     }
 }

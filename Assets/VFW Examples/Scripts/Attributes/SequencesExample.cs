@@ -16,7 +16,7 @@ namespace VFWExamples
 		[Whitespace(0, Top = 100f), Comment(1, "I'm way down!"), Display(Seq.Advanced)]
 		public List<GameObject> Gos;
 
-		[Display(Seq.GuiBox | Seq.LineNumbers | Seq.PerItemRemove)]
+		[Display(Seq.GuiBox | Seq.LineNumbers | Seq.PerItemRemove | Seq.PerItemInsert)]
 		public List<string> Strings;
 
 		// PerItem indicates that you want to apply your attributes on each element
