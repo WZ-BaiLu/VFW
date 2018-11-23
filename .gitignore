@@ -33,3 +33,5 @@ Rebracer.xml
 pc_Data/
 pc.exe
 UnityVS.config
+.vs/VFW/v15/Server/sqlite3/storage.ide-shm
+.vs/VFW/v15/Server/sqlite3/storage.ide-wal

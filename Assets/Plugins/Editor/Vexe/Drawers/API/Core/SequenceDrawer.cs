@@ -265,6 +265,10 @@ namespace Vexe.Editor.Drawers
                                         TElement cloned = (TElement)_elementToClone.Clone();
                                         Insert(i, cloned);
                                     }
+                                } else {
+                                    if (!_options.Readonly && _options.PerItemInsert && gui.AddButton("element", MiniButtonStyle.ModRight)) {
+                                        Insert(i, (TElement)_elementType.GetDefaultValueEmptyIfString());
+                                    }
                                 }
                             }
                         }
